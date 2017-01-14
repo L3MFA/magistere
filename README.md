@@ -1,2 +1,1 @@
-# magistere
 Cours de Magistère
