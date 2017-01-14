@@ -1,0 +1,57 @@
+% Amphi du 13/01
+
+\chapter{Le lemme de Baire}
+\begin{theorem}[lemme de Baire, 1905]
+
+
+Soit $(X,d)$ un espace métrique complet, $\parenthesis{U_n}_{n\in\NN}$ une suite dénombrable d'ouverts denses de $X$.
+
+Alors $\bigcap_{n\in\NN} U_n$ est encore dense.
+\end{theorem}
+
+Il en existe un énoncé équivalent portant sur les fermés:
+
+\begin{theorem}
+  Soit $(X,d)$ un espace métrique complet, $\parenthesis{F_n}_{n\in\NN}$ des fermés d'interieurs vides.
+
+  Alors $\bigcup_{n\in\NN} F_n$ est aussi d'intérieur vide.
+
+\end{theorem}
+
+Montrons qu'ils sont équivalents:
+
+\begin{enumerate}
+  \item \begin{eqnarray*}
+          A\subset X && \text{A dense dans X}\\
+                     &\defiff& \parenthesis{A\subset F, F \text{ fermé de } X \implies F = X}\\
+                     &\iff& \parenthesis{^CF\subset ^CA, ^CF \text{ ouvert de } X \implies ^CF = \varnothing}\\
+                     &\iff& \text{tout ouvert inclus dans $^CA$ est vide}\\
+                     &\defiff& ^CA \text{ est d'intérieur vide}
+        \end{eqnarray*}
+
+  \item $^C\parenthesis{\bigcap A_n} = \bigcup ^C A_n$
+\end{enumerate}
+
+\begin{remarque}
+  \begin{itemize}
+    \item $X$ complet
+    \item $X = \QQ = \bigcup_{n\in\NN} \rdbrackets{x_n}$
+    \item $\bigcup_\NN$ ou $\bigcap_\NN$ dénombrable
+    \item $\RR = \QQ\cup(\RR\setminus\QQ)$\\$\varnothing = \QQ\cap(\RR\setminus\QQ)$
+  \end{itemize}
+\end{remarque}
+
+\begin{proof}
+  $(X,d)$ complet, $(U_n)_{n\in\NN}$\\
+  Soit $V\subset X$ un ouvert non vide de $X$.\\
+  On va construire, par approximation successives un point $\alpha\in V\cap(\bigcap_\NN U_n)$
+  
+  L'ouvert $U_0$ est dense donc $V\cap U_0$ est un ouvert non vide donc contient une $B(a_0, R_0), R_0>0$.
+
+  On choisit $r_0 < R_0$, $r_9 \leq 1$.
+
+  $$B_f(a_0, r_0)\subset B(a_0, R_0)\subset V\cap U_0$$
+
+  \`A l'étape $p\in\NN$ on avait construit $0<r_p<2^{-p}$ un point $a_p\in X$ tel que :
+  \[B_f(a_p, r_p) \subset V\cap (U_0\cap U_1 \cap \dots \cap U_p) \]
+\end{proof}
