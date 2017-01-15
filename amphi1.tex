@@ -54,4 +54,17 @@ Montrons qu'ils sont équivalents:
 
   \`A l'étape $p\in\NN$ on avait construit $0<r_p<2^{-p}$ un point $a_p\in X$ tel que :
   \[B_f(a_p, r_p) \subset V\cap (U_0\cap U_1 \cap \dots \cap U_p) \]
+
+  \[\ast B(a_p, r_p)\cup \underset{\text{ouvert dense}}{U_{p+1}} = \text{ouvert non vide} \]
+
+  Comme en $p=0$, on récupère $0<r_{p+1}\leq 2^{-(p+1)}$, un point $a_{p+1}\in X$ avec
+  \[B_f(a_{p+1}, r_{+1}) \subset B(a_p, r_p)\cap U_{p+1} \subset V\cap (U_0\cap \dots \cap U_{p+1})\]
+
+  On constate que $d(a_p, a_{p+1})\leq 2^{-p}$.
+
+  Par inégalité triangulaire et $\sum 2^{-p} < \infty$, on a que $(a_p)_{p\in\NN}$ est de Cauchy dans $X$. Comme $X$ est complet, cette suite converge vers $\alpha \in X$.
+
+  Fixons $n\in\NN$, pour tous $p\geq n$, $a_p\in B_f(a_n, r_n)\subset V\cap(U_0\cap \dots \cap U_n)$. Donc $\alpha = \lim_{p\to+\infty} a_p \in B_f(a_n, r_n) \subset V \cap (U_0\cap \dots \cap U_n)$ i.e. $\forall n\in \NN, \alpha \in V \cap (U_0 \cap \dots \cap U_n)$, donc finalement:
+
+  \[\alpha \in V \cap \parenthesis{\bigcap_{n\in\NN}U_n}\]
 \end{proof}
